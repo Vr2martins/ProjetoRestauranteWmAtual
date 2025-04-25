@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+}
+
+.imgfundo {
+    background-image: url(imgRestaurante/buteco.png);
+    z-index: 100%;
+}
+
+.menu {
+    border: 2px solid black;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    background: red;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    /* z-index: 500%; */
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 9px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    border: 2px inset red;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-footer {
+    padding: 0 15px 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.add-button {
+    background-color: #21a300;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 0;
+}
