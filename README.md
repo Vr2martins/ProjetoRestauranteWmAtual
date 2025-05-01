@@ -36,3 +36,6 @@ Este projeto foi desenvolvido utilizando HTML, CSS e JavaScript, seguindo boas p
 Para entrar em contato com o Restaurante WM:
 WhatsApp: (11) 96830-2157
 Endereço: R. Herbert Spencer, 389 - Paraisópolis, São Paulo - SP, 05663-010
+
+
+![image](https://github.com/user-attachments/assets/7b06b426-6965-4488-885d-802cfe2d0da1)
