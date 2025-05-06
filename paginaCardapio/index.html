@@ -1,173 +1,687 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurante Delivery</title>
+  <title>Cardápio Restaurante WM</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #fffaf0;
+      background-color: #f4f4f4;
       margin: 0;
-      padding: 0;
+      padding: 40px;
     }
 
-    header, footer {
-      background-color: #b22222;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-
+    h1,
     h2 {
-      text-align: center;
-      color: #b22222;
+      text-align: left;
+      font-size: 28px;
+      margin-bottom: 20px;
     }
 
-    section {
-      padding: 30px;
-      margin: 20px;
-      border-radius: 10px;
-      background-color: #ffffff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
-    .item-cardapio {
-      background-color: #fdf5e6;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 10px;
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease;
     }
 
-    .item-cardapio button {
-      background-color: #b22222;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
+    .card:hover {
+      transform: scale(1.02);
     }
 
-    .item-cardapio button:hover {
-      background-color: #8b0000;
-    }
-
-    .botao-finalizar {
-      display: inline-block;
-      background-color: #228b22;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-
-    form input, form select {
-      display: block;
+    .card img {
       width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+      height: 160px;
+      object-fit: cover;
     }
 
-    form button {
-      background-color: #b22222;
+    .card-content {
+      padding: 15px;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .card-footer {
+      padding: 0 15px 15px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .add-button {
+      background-color: #21a300;
       color: white;
-      padding: 10px 20px;
       border: none;
-      border-radius: 5px;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      font-size: 20px;
       cursor: pointer;
-    }
-
-    form button:hover {
-      background-color: #8b0000;
+      line-height: 0;
     }
   </style>
 </head>
+
 <body>
+  <h1>Cardápio Restaurante WM</h1>
 
-  <header>
-    <h1>Restaurante WM Delivery</h1>
-  </header>
-
-  <section id="cardapio">
-    <h2>Nosso Cardápio</h2>
-    <div class="item-cardapio">
-      <h3>Feijoada</h3>
-      <p>Deliciosa feijoada completa</p>
-      <p><strong>R$ 30,00</strong></p>
-      <button onclick="adicionarItem('Feijoada', 30)">Adicionar</button>
+  <h2>À La Carte</h2>
+  <div class="menu-grid">
+    <div class="card"><img src="" alt="Bisteca">
+      <div class="card-content">
+        <div class="card-title">Bisteca</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 27,99</div><button class="add-button">+</button>
+      </div>
     </div>
-    <div class="item-cardapio">
-      <h3>Lasanha</h3>
-      <p>Lasanha de carne com queijo</p>
-      <p><strong>R$ 25,00</strong></p>
-      <button onclick="adicionarItem('Lasanha', 25)">Adicionar</button>
+    <div class="card"><img src="" alt="Calabresa">
+      <div class="card-content">
+        <div class="card-title">Calabresa</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 27,99</div><button class="add-button">+</button>
+      </div>
     </div>
-    <div class="item-cardapio">
-      <h3>Strogonoff</h3>
-      <p>Strogonoff de frango com arroz e batata palha</p>
-      <p><strong>R$ 28,00</strong></p>
-      <button onclick="adicionarItem('Strogonoff', 28)">Adicionar</button>
+    <div class="card"><img src="" alt="Contra a Cavalo">
+      <div class="card-content">
+        <div class="card-title">Contra a Cavalo</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 34,99</div><button class="add-button">+</button>
+      </div>
     </div>
-  </section>
+    <div class="card"><img src="" alt="Contra Filé">
+      <div class="card-content">
+        <div class="card-title">Contra Filé</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 32,99</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Filé de Frango">
+      <div class="card-content">
+        <div class="card-title">Filé de Frango</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 27,99</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Filé de Tilápia">
+      <div class="card-content">
+        <div class="card-title">Filé de Tilápia</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 29,99</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Muqueca de Tilápia">
+      <div class="card-content">
+        <div class="card-title">Muqueca de Tilápia</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 34,99</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Milanesa de Peixe">
+      <div class="card-content">
+        <div class="card-title">Milanesa de Peixe</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 32,99</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Milanesa de Frango">
+      <div class="card-content">
+        <div class="card-title">Milanesa de Frango</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 32,99</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Milanesa de Contra">
+      <div class="card-content">
+        <div class="card-title">Milanesa de Contra</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 32,99</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Parmegiana de Frango">
+      <div class="card-content">
+        <div class="card-title">Parmegiana de Frango</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 34,99</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Parmegiana de Contra">
+      <div class="card-content">
+        <div class="card-title">Parmegiana de Contra</div>
+        <div class="card-desc">Arroz, feijão, fritas, farofa e salada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 34,99</div><button class="add-button">+</button>
+      </div>
+    </div>
+  </div>
 
-  <section id="carrinho">
-    <h2>Seu Carrinho</h2>
-    <ul id="lista-carrinho"></ul>
-    <p id="total">Total: R$ 0,00</p>
-    <a href="#finalizar" class="botao-finalizar">Finalizar Pedido</a>
-  </section>
+  <h2>Pastéis</h2>
+  <div class="menu-grid">
+    <div class="card"><img src="" alt="Pastel de Carne">
+      <div class="card-content">
+        <div class="card-title">Pastel de Carne</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Pastel de Queijo">
+      <div class="card-content">
+        <div class="card-title">Pastel de Queijo</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Pastel Bauru">
+      <div class="card-content">
+        <div class="card-title">Pastel Bauru</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Pastel de Frango">
+      <div class="card-content">
+        <div class="card-title">Pastel de Frango</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Pastel Carne com Ovo">
+      <div class="card-content">
+        <div class="card-title">Pastel Carne com Ovo</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Pastel Carne com Queijo">
+      <div class="card-content">
+        <div class="card-title">Pastel Carne com Queijo</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Pastel Carne com Catupiry">
+      <div class="card-content">
+        <div class="card-title">Pastel Carne com Catupiry</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Pastel Frango com Queijo">
+      <div class="card-content">
+        <div class="card-title">Pastel Frango com Queijo</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Pastel Frango com Catupiry">
+      <div class="card-content">
+        <div class="card-title">Pastel Frango com Catupiry</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Pastel Calabresa com Queijo">
+      <div class="card-content">
+        <div class="card-title">Pastel Calabresa com Queijo</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Pastel Queijo com Bacon">
+      <div class="card-content">
+        <div class="card-title">Pastel Queijo com Bacon</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Pastel de Pizza">
+      <div class="card-content">
+        <div class="card-title">Pastel de Pizza</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+  </div>
 
-  <section id="finalizar">
-    <h2>Finalizar Pedido</h2>
-    <form onsubmit="enviarPedido(); return false;">
-      <input type="text" id="nome" placeholder="Seu nome" required>
-      <input type="text" id="endereco" placeholder="Endereço de entrega" required>
-      <select id="pagamento" required>
-        <option value="">Forma de Pagamento</option>
-        <option value="Pix">Pix</option>
-        <option value="Cartão">Cartão</option>
-        <option value="Dinheiro">Dinheiro</option>
-      </select>
-      <button type="submit">Enviar Pedido</button>
-    </form>
-  </section>
+  <h2>Pastéis</h2>
+  <div class="menu-grid">
 
-  <footer>
-    <p>&copy; 2025 Restaurante WM - Todos os direitos reservados</p>
-  </footer>
+  </div>
 
-  <script>
-    let carrinho = [];
+  <h2>Hambúrgueres</h2>
+  <div class="menu-grid">
+    <div class="card"><img src="" alt="Simples">
+      <div class="card-content">
+        <div class="card-title">Simples</div>
+        <div class="card-desc">Pão e hambúrguer</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 13,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Americano">
+      <div class="card-content">
+        <div class="card-title">Americano</div>
+        <div class="card-desc">Pão francês, ovo, alface, tomate, presunto e mussarela</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 18,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="X-Burguer">
+      <div class="card-content">
+        <div class="card-title">X-Burguer</div>
+        <div class="card-desc">Pão, hambúrguer e mussarela</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 15,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="X-Bacon">
+      <div class="card-content">
+        <div class="card-title">X-Bacon</div>
+        <div class="card-desc">Pão, hambúrguer, mussarela e bacon</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 19,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="X-Salada">
+      <div class="card-content">
+        <div class="card-title">X-Salada</div>
+        <div class="card-desc">Pão, hambúrguer, mussarela, alface e tomate</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 18,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="X-Cheddar">
+      <div class="card-content">
+        <div class="card-title">X-Cheddar</div>
+        <div class="card-desc">Pão, hambúrguer, mussarela e cheddar</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 19,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="X-Catupiry">
+      <div class="card-content">
+        <div class="card-title">X-Catupiry</div>
+        <div class="card-desc">Pão, hambúrguer, mussarela e catupiry</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 19,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="X-Egg Salada">
+      <div class="card-content">
+        <div class="card-title">X-Egg Salada</div>
+        <div class="card-desc">Pão, hambúrguer, ovo, presunto, mussarela, alface e tomate</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 19,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="X-Chicken">
+      <div class="card-content">
+        <div class="card-title">X-Chicken</div>
+        <div class="card-desc">Pão, hambúrguer de frango, presunto, mussarela e catupiry</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 21,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="X-Tudo">
+      <div class="card-content">
+        <div class="card-title">X-Tudo</div>
+        <div class="card-desc">Hambúrguer, presunto, mussarela, calabresa, bacon, catupiry, cheddar, alface,
+          tomate e ovo</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 30,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+  </div>
 
-    function adicionarItem(nome, preco) {
-      carrinho.push({ nome, preco });
-      atualizarCarrinho();
-    }
+  <h2>Porções</h2>
+  <div class="menu-grid">
+    <div class="card"><img src="" alt="Calabresa Acebolada">
+      <div class="card-content">
+        <div class="card-title">Calabresa Acebolada</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 48,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Carne Seca com Mandioca">
+      <div class="card-content">
+        <div class="card-title">Carne Seca com Mandioca</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 76,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Contra Filé">
+      <div class="card-content">
+        <div class="card-title">Contra Filé</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 64,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Frango a Passarinho">
+      <div class="card-content">
+        <div class="card-title">Frango a Passarinho</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 56,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Frango com Fritas">
+      <div class="card-content">
+        <div class="card-title">Frango com Fritas</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 53,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Batata Frita (P)">
+      <div class="card-content">
+        <div class="card-title">Batata Frita (P)</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 30,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Batata Frita (G)">
+      <div class="card-content">
+        <div class="card-title">Batata Frita (G)</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 37,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Batata Frita WM (P)">
+      <div class="card-content">
+        <div class="card-title">Batata Frita WM (P)</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 37,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Batata Frita WM (G)">
+      <div class="card-content">
+        <div class="card-title">Batata Frita WM (G)</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 40,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Isca de Peixe à Milanesa">
+      <div class="card-content">
+        <div class="card-title">Isca de Peixe à Milanesa</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 79,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Mandioca">
+      <div class="card-content">
+        <div class="card-title">Mandioca</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 25,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Polenta">
+      <div class="card-content">
+        <div class="card-title">Polenta</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 24,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Camarão à Milanesa">
+      <div class="card-content">
+        <div class="card-title">Camarão à Milanesa</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 90,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Porção Mista">
+      <div class="card-content">
+        <div class="card-title">Porção Mista</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 64,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+  </div>
 
-    function atualizarCarrinho() {
-      const lista = document.getElementById("lista-carrinho");
-      const total = document.getElementById("total");
-      lista.innerHTML = "";
-      let totalGeral = 0;
-      carrinho.forEach(item => {
-        const li = document.createElement("li");
-        li.innerText = ${item.nome} - R$ ${item.preco.toFixed(2)};
-        lista.appendChild(li);
-        totalGeral += item.preco;
-      });
-      total.innerText = Total: R$ ${totalGeral.toFixed(2)};
-    }
+  <h2>Bebidas</h2>
+  <div class="menu-grid">
+    <div class="card"><img src="" alt="Água">
+      <div class="card-content">
+        <div class="card-title">Água</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 4,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Red Bull">
+      <div class="card-content">
+        <div class="card-title">Red Bull</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Refrigerante 350ml">
+      <div class="card-content">
+        <div class="card-title">Refrigerante 350ml</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 7,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Refrigerante 600ml">
+      <div class="card-content">
+        <div class="card-title">Refrigerante 600ml</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 8,50</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Refrigerante 1 litro">
+      <div class="card-content">
+        <div class="card-title">Refrigerante 1 litro</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 11,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Refrigerante 2 litros">
+      <div class="card-content">
+        <div class="card-title">Refrigerante 2 litros</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 15,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Suco Copo">
+      <div class="card-content">
+        <div class="card-title">Suco Copo</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 12,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Suco Copo com Leite">
+      <div class="card-content">
+        <div class="card-title">Suco Copo com Leite</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Suco Natural 1L">
+      <div class="card-content">
+        <div class="card-title">Suco Natural 1L</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 26,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Suco Natural 1L DF">
+      <div class="card-content">
+        <div class="card-title">Suco Natural 1L Duas Frutas</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 30,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Suco Natural 1L com Leite">
+      <div class="card-content">
+        <div class="card-title">Suco Natural 1L com Leite</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 32,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Jarra de Suco">
+      <div class="card-content">
+        <div class="card-title">Jarra de Suco</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 26,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Jarra de Suco DF">
+      <div class="card-content">
+        <div class="card-title">Jarra de Suco Duas Frutas</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 30,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Jarra de Suco com Leite">
+      <div class="card-content">
+        <div class="card-title">Jarra de Suco com Leite</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 32,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+  </div>
 
-    function enviarPedido() {
-      const nome = document.getElementById("nome").value;
-      const endereco = document.getElementById("endereco").value;
-      const pagamento = document.getElementById("pagamento").value;
-      alert(Pedido enviado!\nCliente: ${nome}\nEndereço: ${endereco}\nPagamento: ${pagamento});
-    }
-  </script>
+  <h2>Sobremesas</h2>
+  <div class="menu-grid">
+    <div class="card"><img src="" alt="Petit Gateau">
+      <div class="card-content">
+        <div class="card-title">Petit Gateau</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 22,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Brownie">
+      <div class="card-content">
+        <div class="card-title">Brownie</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 18,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Sorvete de Creme">
+      <div class="card-content">
+        <div class="card-title">Sorvete de Creme</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 12,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Açaí 380ml">
+      <div class="card-content">
+        <div class="card-title">Açaí 380ml</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 14,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+    <div class="card"><img src="" alt="Açaí 473ml">
+      <div class="card-content">
+        <div class="card-title">Açaí 473ml</div>
+      </div>
+      <div class="card-footer">
+        <div class="price">R$ 18,00</div><button class="add-button">+</button>
+      </div>
+    </div>
+  </div>
+
+
+
 </body>
+
 </html>
