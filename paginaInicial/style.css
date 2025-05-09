@@ -102,6 +102,7 @@ nav ul li a {
     /* aqui é o espaço entre o texto de um lado e a img  */
 }
 
+/*
 .texto {
     color: black;
     flex: 1;
@@ -110,6 +111,18 @@ nav ul li a {
     margin-bottom: 0px;
     background-color: white;
     border-radius: 30px;
+}
+*/
+
+.texto{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    color: white;
+    flex: 1;
+    padding: 10px;
+    margin-right: 28px;
+    margin-bottom: 0px;
 }
 
 .imagem {
