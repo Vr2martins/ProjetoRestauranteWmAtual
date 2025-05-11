@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/css/registro.css">
+    <title>Área de Registro</title>
+</head>
+
+<body>
+    <div>
+        <!-- Campo de menu de navegação -->
+        <div class="menu">
+            <ul class="ulmenu">
+                <li class="limenu dropdown">
+                    <a class="dropbtn" href="#"><img src="../../public/img/outromenu.png" alt="Menu"></a>
+                    <div class="dropdown-conteudo">
+                        <a href="../../index.html">Página Sobre</a>
+                        <a href="../pages/cardapio.html">Cardápio</a>
+                        <a href="#">Carrinho</a>
+                        <a href="../pages/login2.html">Login</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Container de informações de cadastro -->
+        <main class="container" id="register-container">
+            <form id="register-form">
+                <div id="message-box" style="display: none; text-align: center; margin-bottom: 10px;">
+                </div>
+
+                <h1 id="form-title">Cadastro</h1>
+                <!-- Campo de cadastrar Nome Completo -->
+                <div class="input-box" id="name-box">
+                    <label for="name-input">Nome completo</label>
+                    <input id="name-input" placeholder="Nome completo" type="text">
+                </div>
+                <!-- Campo de cadastrar Contato -->
+                <div class="input-box" id="contact-box">
+                    <label for="contact-input">Contato</label>
+                    <input id="contact-input" placeholder="Telefone" type="tel">
+                </div>
+                <!-- Campo de cadastrar E-mail -->
+                <div class="input-box" id="email-box">
+                    <label for="email-input">Email</label>
+                    <input id="email-input" placeholder="E-mail" type="email">
+                </div>
+                <!-- Campo de cadastrar Senha -->
+                <div class="input-box" id="password-box">
+                    <label for="password-input">Crie uma senha</label>
+                    <input id="password-input" placeholder="Senha" type="password">
+                </div>
+                <!-- Campo de cadastrar Endereço -->
+                <div class="input-box" id="address-box">
+                    <label for="address-input">Endereço</label>
+                    <input id="address-input" type="text" name="endereco" placeholder="Rua e número">
+                </div>
+                <!-- Campo de cadastrar Cidade -->
+                <div class="input-box" id="city-box">
+                    <label for="city-input">Cidade</label>
+                    <input id="city-input" type="text" name="cidade" placeholder="Cidade">
+                </div>
+                <!-- Campo de cadastrar CEP -->
+                <div class="input-box" id="cep-box">
+                    <label for="cep-input">CEP</label>
+                    <input id="cep-input" type="text" name="cep" placeholder="CEP">
+                </div>
+                <button type="submit" class="cadastro" id="register-button">Cadastrar</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="./registro.js"></script>
+</body>
+
+</html>

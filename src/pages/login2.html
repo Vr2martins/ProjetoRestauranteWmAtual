@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../public/css/login.css">
+    <title> ENTRAR </title>
+</head>
+
+<body>
+    <div id="main-wrapper">
+        <main class="container" id="login-container">
+            <form id="login-form">
+                <h1 id="form-title">ENTRAR</h1>
+                <div class="input-box" id="username-box">
+                    <input id="username-input" placeholder="Usúario" type="email">
+                    <i class="bx bxs-user" id="username-icon"></i>
+                </div>
+                <div class="input-box" id="password-box">
+                    <input id="password-input" placeholder="Senha" type="password">
+                    <i class="bx bxs-lock-alt" id="password-icon"></i>
+                </div>
+
+                <div class="remember-forgot" id="remember-forgot-section">
+                    <label id="remember-label">
+                        <input id="remember-checkbox" type="checkbox">
+                        Lembrar senha
+                    </label>
+                    <a href="#" id="forgot-link">Esqueci senha</a>
+                </div>
+
+                <button type="submit" class="login" id="login-button">ENTRAR</button>
+
+                <div class="register-link" id="register-section">
+                    <p id="register-text">Não possui uma conta? <a href="#" id="register-link">Cadastra-se</a></p>
+                </div>
+            </form>
+
+            <div id="message-box"></div> <!-- cod para verificar se o login foi bem sucedido ou não -->
+
+        </main>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

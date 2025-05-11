@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../img/buteco.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ============================ */
+/* ESSA PARTE AQUI CRIA UM FUNDO MAIS ESCUTO EM CIMA DA IMAGEM E FAZ COM QUE PARECA OPACIDADE  */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(90, 81, 81, 0.5); */
+    /* Cor de fundo com opacidade */
+    z-index: -1;
+    /* Coloca o pseudo-elemento atrás do conteúdo */
+}
+
+/* ===================================== */
+.menu {
+    position: relative;
+}
+
+.ulmenu {
+    background: #720b0b;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.limenu {
+    float: left;
+}
+
+.limenu a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.limenu a:hover,
+.dropdown:hover .dropbtn {
+    /* enquanto o mouse estiver em cima do dropdown o dropbtn vai ficar vermelho tambem */
+    background: red;
+}
+
+.limenu.dropdown {
+    display: inline-block;
+}
+
+.dropdown-conteudo {
+    display: none;
+    position: absolute;
+    background: #720b0b;
+    width: 150px;
+    z-index: 999;
+}
+
+.dropdown-conteudo a {
+    color: white;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-conteudo a:hover {
+    color: #720b0b;
+}
+
+.dropdown:hover .dropdown-conteudo {
+    /* .quando o mouse estiver em cima, o conteudo vai aparecer */
+    display: block;
+}
+
+
+
+
+/* ==================================== */
+.container {
+    position: relative;
+    left: 32%;
+    margin: 30px;
+    width: 420px;
+    background-color: transparent;
+    /* opacity: 60%; */
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    color: #fff;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(5px);
+}
+
+.container h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 60%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.cadastro {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    margin-top: 20px;
+}
+
+.cadastro.hover {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #fff;
+    transition: 0.5s;
+}
+
+.register-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0 15px;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+#message-box {
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+#message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
