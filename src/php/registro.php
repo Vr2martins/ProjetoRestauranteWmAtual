@@ -3,10 +3,10 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // Conectar ao banco de dados
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "restaurante";
+$servername = "sql107.infinityfree.com";
+$username = "if0_39088240";
+$password = "Dp8jqJ7CKIv2";
+$dbname = "if0_39088240_XXX";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
